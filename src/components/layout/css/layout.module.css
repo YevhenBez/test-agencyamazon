@@ -1,0 +1,17 @@
+.layoutPage {
+  display: flex;
+}
+
+.layoutPage__sidebar {
+  z-index: 1;
+}
+
+.layoutPage__container {
+  padding: 41px 95px 258px 71px;
+  background-color: rgba(247, 249, 249, 0.985);
+  width: 100%;
+}
+
+.layoutPage__container__header {
+  padding-bottom: 51px;
+}
