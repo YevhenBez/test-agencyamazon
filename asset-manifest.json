@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/test-agencyamazon/static/css/main.f4fb6255.css",
-    "main.js": "/test-agencyamazon/static/js/main.e97f8cc8.js",
+    "main.js": "/test-agencyamazon/static/js/main.e47928ce.js",
     "static/css/104.1200cfe5.chunk.css": "/test-agencyamazon/static/css/104.1200cfe5.chunk.css",
-    "static/js/104.e206e6a1.chunk.js": "/test-agencyamazon/static/js/104.e206e6a1.chunk.js",
+    "static/js/104.980418c9.chunk.js": "/test-agencyamazon/static/js/104.980418c9.chunk.js",
     "static/js/518.eae89f24.chunk.js": "/test-agencyamazon/static/js/518.eae89f24.chunk.js",
     "static/media/sprite-icon.svg": "/test-agencyamazon/static/media/sprite-icon.522b37125ab1dddda7e5594f4c9b4fc9.svg",
     "index.html": "/test-agencyamazon/index.html",
     "main.f4fb6255.css.map": "/test-agencyamazon/static/css/main.f4fb6255.css.map",
-    "main.e97f8cc8.js.map": "/test-agencyamazon/static/js/main.e97f8cc8.js.map",
+    "main.e47928ce.js.map": "/test-agencyamazon/static/js/main.e47928ce.js.map",
     "104.1200cfe5.chunk.css.map": "/test-agencyamazon/static/css/104.1200cfe5.chunk.css.map",
-    "104.e206e6a1.chunk.js.map": "/test-agencyamazon/static/js/104.e206e6a1.chunk.js.map",
+    "104.980418c9.chunk.js.map": "/test-agencyamazon/static/js/104.980418c9.chunk.js.map",
     "518.eae89f24.chunk.js.map": "/test-agencyamazon/static/js/518.eae89f24.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4fb6255.css",
-    "static/js/main.e97f8cc8.js"
+    "static/js/main.e47928ce.js"
   ]
 }
