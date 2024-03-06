@@ -7,7 +7,7 @@ const Customers = () => {
   const itemsPerPage = 8;
 
   const [filter, setFilter] = useState('');
-  const [isFocused, setIsFocused] = useState(true);
+  // const [isFocused, setIsFocused] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(
     Math.ceil(listCustomers.length / itemsPerPage)
@@ -79,19 +79,19 @@ const Customers = () => {
     setFilter(event.currentTarget.value);
     setCurrentPage(1);
 
-    if (event.currentTarget.value !== 'Active') {
-      setIsFocused(true);
-    }
+    // if (event.currentTarget.value !== 'Active') {
+    //   setIsFocused(true);
+    // }
 
-    if (event.currentTarget.value === 'Active') {
-      setIsFocused(false);
-    }
+    // if (event.currentTarget.value === 'Active') {
+    //   setIsFocused(false);
+    // }
   };
 
   return (
     <div className={css.customersContainer}>
       <div className={css.customersContainer__filterBoard}>
-        <div className={css.customersContainer__filterBoard__btns}>
+        {/* <div className={css.customersContainer__filterBoard__btns}>
           <button
             className={
               isFocused
@@ -120,7 +120,7 @@ const Customers = () => {
           >
             Active Members
           </button>
-        </div>
+        </div> */}
         <div className={css.customersContainer__filterBoard__inputBox}>
           <svg
             width="24"

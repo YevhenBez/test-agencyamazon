@@ -51,7 +51,7 @@ const Navigation = () => {
               >
                 <use xlinkHref={`${sprite}#user-square`} />
               </svg>
-              Customers
+              Accounts
               <svg
                 width="16"
                 height="16"
