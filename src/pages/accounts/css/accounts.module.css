@@ -58,6 +58,7 @@
     font-size: 14px;
     font-weight: 600;
     width: auto;
+    cursor: pointer;
 }
 
 .accountsContainer__table__tr__indentEnd {

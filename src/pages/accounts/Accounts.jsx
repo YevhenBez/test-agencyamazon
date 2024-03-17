@@ -11,6 +11,7 @@ const Accounts = () => {
   const [totalPages, setTotalPages] = useState(
     Math.ceil(listAccounts.length / itemsPerPage)
   );
+  const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
 
   let maxPageNumbersToShow;
 
@@ -37,12 +38,25 @@ const Accounts = () => {
     }
   }, [currentPage, itemsPerPage, filteredAccounts, totalPages]);
 
+    // Функция для сортировки данных
+  const sortedData = sortConfig.key ? [...filteredAccounts].sort((a, b) => {
+    if (a[sortConfig.key] < b[sortConfig.key]) {
+      return sortConfig.direction === 'ascending' ? -1 : 1;
+    }
+    if (a[sortConfig.key] > b[sortConfig.key]) {
+      return sortConfig.direction === 'ascending' ? 1 : -1;
+    }
+    return 0;
+  }) : filteredAccounts;
+
   const displayItems = useMemo(() => {
-    return filteredAccounts.slice(
+    return sortedData.slice(
       (currentPage - 1) * itemsPerPage,
       currentPage * itemsPerPage
     );
-  }, [currentPage, itemsPerPage, filteredAccounts]);
+  }, [currentPage, itemsPerPage, sortedData]);
+
+
 
   maxPageNumbersToShow = totalPages > 3 ? 4 : totalPages;
 
@@ -78,6 +92,15 @@ const Accounts = () => {
 
   };
 
+  // Функция для изменения столбца сортировки и направления
+  const requestSort = key => {
+    let direction = 'ascending';
+    if (sortConfig.key === key && sortConfig.direction === 'ascending') {
+      direction = 'descending';
+    }
+    setSortConfig({ key, direction });
+  };
+
   return (
     <div className={css.accountsContainer}>
       <div className={css.accountsContainer__filterBoard}>
@@ -104,14 +127,14 @@ const Accounts = () => {
         <thead>
           <tr className={css.accountsContainer__table__tr}>
             <th className={css.accountsContainer__table__tr__indentBgn}></th>
-            <th className={css.accountsContainer__table__tr__th}>
+            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('accountId')}>
               accountId
             </th>
-            <th className={css.accountsContainer__table__tr__th}>email</th>
-            <th className={css.accountsContainer__table__tr__th}>
+            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('email')}>email</th>
+            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('authToken')}>
               authToken
             </th>
-            <th className={css.accountsContainer__table__tr__th}>creationDate</th>
+            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('creationDate')}>creationDate</th>
             <th className={css.accountsContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
