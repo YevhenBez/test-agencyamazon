@@ -139,8 +139,7 @@ const Accounts = () => {
           </tr>
         </thead>
 
-        {filter ? (
-          <tbody>
+        <tbody>
             {displayItems.map(filteredAccount => (
               <tr key={filteredAccount.id}>
                 <td></td>
@@ -159,29 +158,8 @@ const Accounts = () => {
                 <td></td>
               </tr>
             ))}
-          </tbody>
-        ) : (
-          <tbody>
-            {displayItems.map(listAccount => (
-              <tr key={listAccount.id}>
-                <td></td>
-                <td className={css.accountsContainer__table__td}>
-                  {listAccount.id}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {listAccount.email}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {listAccount.authToken}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {listAccount.creationDate}
-                </td>
-                <td></td>
-              </tr>
-            ))}
-          </tbody>
-        )}
+        </tbody>
+                
       </table>
       <div>
         <button
