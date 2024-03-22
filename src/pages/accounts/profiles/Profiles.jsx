@@ -1,13 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-import listAccounts from '../../path/to/accounts.json';
-import css from './css/accounts.module.css';
-import sprite from '../../img/svg/sprite-icon.svg';
+import listAccounts from '../../../path/to/accounts.json';
+import css from './css/profiles.module.css';
+import sprite from '../../../img/svg/sprite-icon.svg';
 
-const Accounts = () => {
-
-  const navigate = useNavigate();
-
+const Profiles = () => {
   const itemsPerPage = 8;
 
   const [filter, setFilter] = useState('');
@@ -42,16 +38,18 @@ const Accounts = () => {
     }
   }, [currentPage, itemsPerPage, filteredAccounts, totalPages]);
 
-    // Функция для сортировки данных
-  const sortedData = sortConfig.key ? [...filteredAccounts].sort((a, b) => {
-    if (a[sortConfig.key] < b[sortConfig.key]) {
-      return sortConfig.direction === 'ascending' ? -1 : 1;
-    }
-    if (a[sortConfig.key] > b[sortConfig.key]) {
-      return sortConfig.direction === 'ascending' ? 1 : -1;
-    }
-    return 0;
-  }) : filteredAccounts;
+  // Функция для сортировки данных
+  const sortedData = sortConfig.key
+    ? [...filteredAccounts].sort((a, b) => {
+        if (a[sortConfig.key] < b[sortConfig.key]) {
+          return sortConfig.direction === 'ascending' ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+          return sortConfig.direction === 'ascending' ? 1 : -1;
+        }
+        return 0;
+      })
+    : filteredAccounts;
 
   const displayItems = useMemo(() => {
     return sortedData.slice(
@@ -59,8 +57,6 @@ const Accounts = () => {
       currentPage * itemsPerPage
     );
   }, [currentPage, itemsPerPage, sortedData]);
-
-
 
   maxPageNumbersToShow = totalPages > 3 ? 4 : totalPages;
 
@@ -93,7 +89,6 @@ const Accounts = () => {
   const handleChangeName = event => {
     setFilter(event.currentTarget.value);
     setCurrentPage(1);
-
   };
 
   // Функция для изменения столбца сортировки и направления
@@ -105,15 +100,11 @@ const Accounts = () => {
     setSortConfig({ key, direction });
   };
 
-  const handleRowClick = () => {
-    navigate(`/profiles`);
-  };
-
   return (
     <div className={css.accountsContainer}>
       <div className={css.accountsContainer__filterBoard}>
-        <h1>Table Accounts</h1>
-        
+        <h1>Table Profiles</h1>
+
         <div className={css.accountsContainer__filterBoard__inputBox}>
           <svg
             width="24"
@@ -135,39 +126,54 @@ const Accounts = () => {
         <thead>
           <tr className={css.accountsContainer__table__tr}>
             <th className={css.accountsContainer__table__tr__indentBgn}></th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('accountId')}>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('accountId')}
+            >
               accountId
             </th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('email')}>email</th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('authToken')}>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('email')}
+            >
+              email
+            </th>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('authToken')}
+            >
               authToken
             </th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('creationDate')}>creationDate</th>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('creationDate')}
+            >
+              creationDate
+            </th>
             <th className={css.accountsContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
 
         <tbody>
-            {displayItems.map(filteredAccount => (
-              <tr key={filteredAccount.id} onClick={handleRowClick}>
-                <td></td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.id}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.email}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.authToken}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.creationDate}
-                </td>
-                <td></td>
-              </tr>
-            ))}
+          {displayItems.map(filteredAccount => (
+            <tr key={filteredAccount.id}>
+              <td></td>
+              <td className={css.accountsContainer__table__td}>
+                {filteredAccount.id}
+              </td>
+              <td className={css.accountsContainer__table__td}>
+                {filteredAccount.email}
+              </td>
+              <td className={css.accountsContainer__table__td}>
+                {filteredAccount.authToken}
+              </td>
+              <td className={css.accountsContainer__table__td}>
+                {filteredAccount.creationDate}
+              </td>
+              <td></td>
+            </tr>
+          ))}
         </tbody>
-                
       </table>
       <div>
         <button
@@ -207,4 +213,4 @@ const Accounts = () => {
   );
 };
 
-export default Accounts;
+export default Profiles;
