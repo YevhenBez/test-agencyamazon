@@ -1,0 +1,242 @@
+[
+  {
+    "profileId": "b7ab935a-2feb-4d84-a457-52a4ac04d3b5",
+    "country": "Mexico",
+    "marketplace": "eBay"
+  },
+  {
+    "profileId": "4b6d1841-9904-4027-86a2-fc4175c26a6d",
+    "country": "India",
+    "marketplace": "Alibaba"
+  },
+  {
+    "profileId": "70e2172c-ba08-45fa-a60b-5d16d902f1ee",
+    "country": "Poland",
+    "marketplace": "MercadoLibre"
+  },
+  {
+    "profileId": "b703451b-4538-4394-be73-c5a002443813",
+    "country": "Mexico",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "646865c6-df55-410f-8b38-ead51feed34c",
+    "country": "France",
+    "marketplace": "Zalando"
+  },
+  {
+    "profileId": "85d84262-a7b3-4f9d-8d73-fc73c11ec8bf",
+    "country": "Sweden",
+    "marketplace": "MercadoLibre"
+  },
+  {
+    "profileId": "f3aac566-f216-4300-8a03-e1d316034c78",
+    "country": "Switzerland",
+    "marketplace": "eBay"
+  },
+  {
+    "profileId": "a2929bb1-3c00-48f0-94be-7e6d62080a6c",
+    "country": "United States",
+    "marketplace": "Flipkart"
+  },
+  {
+    "profileId": "950e150e-591a-41b7-afe8-564b9c242b3c",
+    "country": "India",
+    "marketplace": "Walmart"
+  },
+  {
+    "profileId": "cea2f814-c73e-4680-a235-11151bd48013",
+    "country": "United Kingdom",
+    "marketplace": "Walmart"
+  },
+  {
+    "profileId": "cbff3f8e-14e9-4855-8356-a41cad90de9b",
+    "country": "Netherlands",
+    "marketplace": "Flipkart"
+  },
+  {
+    "profileId": "fb0719e1-e571-4606-8fe2-23e23caa4ec4",
+    "country": "Poland",
+    "marketplace": "Flipkart"
+  },
+  {
+    "profileId": "5aa99628-b7b8-4996-9c0c-64cb9f2b3e7e",
+    "country": "Norway",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "fcb5b6ae-ece0-4fe9-b0f1-397b65921138",
+    "country": "Norway",
+    "marketplace": "Etsy"
+  },
+  {
+    "profileId": "b2b7a1d9-5bf4-4fbe-bba1-fe35450a5f8a",
+    "country": "India",
+    "marketplace": "eBay"
+  },
+  {
+    "profileId": "ccf0f7ad-2afc-4260-b568-8087b3ccac83",
+    "country": "India",
+    "marketplace": "Walmart"
+  },
+  {
+    "profileId": "27fb7137-213f-4d47-b22d-4c5a1c0ba552",
+    "country": "United Kingdom",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "47802c5f-866d-45ef-8d85-3e5442379b4a",
+    "country": "France",
+    "marketplace": "Etsy"
+  },
+  {
+    "profileId": "09cb1932-678f-4e84-9de8-b16c1296a17a",
+    "country": "Spain",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "f6454dd9-7022-4e10-98c8-0870fee77100",
+    "country": "Italy",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "32343e84-23c4-4896-ac64-2ddceaa072ce",
+    "country": "Netherlands",
+    "marketplace": "Etsy"
+  },
+  {
+    "profileId": "579c1996-b918-4d2d-beb0-3a32270fd7a5",
+    "country": "United States",
+    "marketplace": "MercadoLibre"
+  },
+  {
+    "profileId": "8aad5264-ff59-420f-9296-ed418f2cbaf6",
+    "country": "Poland",
+    "marketplace": "Zalando"
+  },
+  {
+    "profileId": "00242acc-7bdf-4631-be26-bc95821322e9",
+    "country": "Mexico",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "a770203b-3e36-44ff-a3d6-49bd17815e27",
+    "country": "Spain",
+    "marketplace": "Flipkart"
+  },
+  {
+    "profileId": "e21887f3-5bf2-48f2-8033-353f2ce05a5f",
+    "country": "Spain",
+    "marketplace": "Zalando"
+  },
+  {
+    "profileId": "14ac6630-d21d-4103-a771-2253fdf123b8",
+    "country": "Germany",
+    "marketplace": "Taobao"
+  },
+  {
+    "profileId": "823b7d7e-5d23-4e8b-81a0-625379142e53",
+    "country": "Switzerland",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "a4ce4c65-930b-4275-be9e-ddb4815ab41a",
+    "country": "Spain",
+    "marketplace": "Etsy"
+  },
+  {
+    "profileId": "145238db-7413-4157-8074-f6da7c9bb73b",
+    "country": "China",
+    "marketplace": "Walmart"
+  },
+  {
+    "profileId": "0263166f-59c7-4a7d-b79f-9aebc546fd51",
+    "country": "Norway",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "fe2efd68-eb2e-4d4f-9f35-c0c71c24f183",
+    "country": "Netherlands",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "53844e66-0fec-467c-adac-ef38f273a8a9",
+    "country": "United States",
+    "marketplace": "Flipkart"
+  },
+  {
+    "profileId": "210e246f-e6eb-41a2-afde-b1f0139398ce",
+    "country": "Switzerland",
+    "marketplace": "Alibaba"
+  },
+  {
+    "profileId": "e2248f89-2e56-4cda-9a14-d718d2825954",
+    "country": "Mexico",
+    "marketplace": "Taobao"
+  },
+  {
+    "profileId": "ccf27e3d-594f-48ba-bc6d-c0f239e76a9e",
+    "country": "Germany",
+    "marketplace": "Zalando"
+  },
+  {
+    "profileId": "51db8ec2-9a14-48b6-81ac-7ee093d1a57f",
+    "country": "United States",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "3285393c-1368-4f49-a7ca-c7872ea9e0d6",
+    "country": "United States",
+    "marketplace": "Zalando"
+  },
+  {
+    "profileId": "903b6414-4d18-4b48-b671-0d6f04378a06",
+    "country": "United States",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "35d3628e-e6a9-4b3c-ae5b-a7316615043b",
+    "country": "United States",
+    "marketplace": "eBay"
+  },
+  {
+    "profileId": "c5b10d5c-3d7a-4ee1-930c-9aeeca103139",
+    "country": "Netherlands",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "419b8533-c40f-44c5-85b4-8c68fa807cdb",
+    "country": "Norway",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "ef42214b-93a0-4bc0-b6b1-4040c6e14d39",
+    "country": "South Africa",
+    "marketplace": "Taobao"
+  },
+  {
+    "profileId": "57d42ac8-f345-4336-9615-fd387e84507d",
+    "country": "Canada",
+    "marketplace": "Rakuten"
+  },
+  {
+    "profileId": "10db5468-e58c-4d52-84db-fa065b568825",
+    "country": "Poland",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "5afc0843-fd31-407c-b2b1-bb009f2fc2a0",
+    "country": "Netherlands",
+    "marketplace": "Taobao"
+  },
+  {
+    "profileId": "3418c330-97c9-40a9-b3e4-bcf186ebe2f0",
+    "country": "Australia",
+    "marketplace": "Amazon"
+  },
+  {
+    "profileId": "87342ae3-5d8f-42eb-b89d-7e1e2b75c129",
+    "country": "South Africa",
+    "marketplace": "Etsy"
+  }
+]
