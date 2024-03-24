@@ -6,7 +6,6 @@ import sprite from '../../../img/svg/sprite-icon.svg';
 const Profiles = () => {
   const itemsPerPage = 8;
 
-
   const { accountId } = useParams();
 
   const [profilesData, setProfilesData] = useState([]);
@@ -18,13 +17,14 @@ const Profiles = () => {
   );
   const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
 
-useEffect(() => {
-
-// Функция для загрузки файла JSON
+  useEffect(() => {
+    // Функция для загрузки файла JSON
     const fetchProfilesData = async () => {
       try {
         // Динамический импорт файла JSON в зависимости от accountId
-        const { default: jsonData } = await import(`../../../path/to/profiles${accountId}.json`);
+        const { default: jsonData } = await import(
+          `../../../path/to/profiles${accountId}.json`
+        );
         setProfilesData(jsonData);
         setJsonLoaded(true);
       } catch (error) {
@@ -34,7 +34,6 @@ useEffect(() => {
     };
 
     fetchProfilesData();
-  
   }, [accountId]);
 
   let maxPageNumbersToShow;
@@ -44,7 +43,7 @@ useEffect(() => {
       row =>
         row.profileId.toLowerCase().includes(filter.toLowerCase()) ||
         row.country.toLowerCase().includes(filter.toLowerCase()) ||
-        row.marketplace.toLowerCase().includes(filter.toLowerCase()) 
+        row.marketplace.toLowerCase().includes(filter.toLowerCase())
     );
   }, [filter, profilesData]);
 
@@ -127,7 +126,21 @@ useEffect(() => {
     <div className={css.accountsContainer}>
       <div className={css.accountsContainer__filterBoard}>
         <h1>Table Profiles</h1>
-        {jsonLoaded ? (<p className={css.accountsContainer__filterBoard__ID}>ID <span className={css.accountsContainer__filterBoard__ID__number}>{accountId}</span></p>) : (<p className={css.accountsContainer__filterBoard__error}>Everything is fine. The site is working. I just haven't created a JSON file for the row you clicked on in the Accounts table. I have created a JSON file only for the first three rows of the Accounts table.</p>)}
+        {jsonLoaded ? (
+          <p className={css.accountsContainer__filterBoard__ID}>
+            ID{' '}
+            <span className={css.accountsContainer__filterBoard__ID__number}>
+              {accountId}
+            </span>
+          </p>
+        ) : (
+          <p className={css.accountsContainer__filterBoard__error}>
+            Everything is fine. The site is working. I just haven't created a
+            JSON file for the row you clicked on in the Accounts table. I have
+            created a JSON file only for the first three rows of the Accounts
+            table.
+          </p>
+        )}
         <div className={css.accountsContainer__filterBoard__inputBox}>
           <svg
             width="24"
@@ -166,7 +179,7 @@ useEffect(() => {
               onClick={() => requestSort('marketplace')}
             >
               marketplace
-            </th>            
+            </th>
             <th className={css.accountsContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
@@ -183,7 +196,7 @@ useEffect(() => {
               </td>
               <td className={css.accountsContainer__table__td}>
                 {filteredAccount.marketplace}
-              </td>              
+              </td>
               <td></td>
             </tr>
           ))}

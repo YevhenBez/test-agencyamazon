@@ -5,7 +5,6 @@ import css from './css/accounts.module.css';
 import sprite from '../../img/svg/sprite-icon.svg';
 
 const Accounts = () => {
-
   const itemsPerPage = 8;
 
   const [filter, setFilter] = useState('');
@@ -40,16 +39,18 @@ const Accounts = () => {
     }
   }, [currentPage, itemsPerPage, filteredAccounts, totalPages]);
 
-    // Функция для сортировки данных
-  const sortedData = sortConfig.key ? [...filteredAccounts].sort((a, b) => {
-    if (a[sortConfig.key] < b[sortConfig.key]) {
-      return sortConfig.direction === 'ascending' ? -1 : 1;
-    }
-    if (a[sortConfig.key] > b[sortConfig.key]) {
-      return sortConfig.direction === 'ascending' ? 1 : -1;
-    }
-    return 0;
-  }) : filteredAccounts;
+  // Функция для сортировки данных
+  const sortedData = sortConfig.key
+    ? [...filteredAccounts].sort((a, b) => {
+        if (a[sortConfig.key] < b[sortConfig.key]) {
+          return sortConfig.direction === 'ascending' ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+          return sortConfig.direction === 'ascending' ? 1 : -1;
+        }
+        return 0;
+      })
+    : filteredAccounts;
 
   const displayItems = useMemo(() => {
     return sortedData.slice(
@@ -57,8 +58,6 @@ const Accounts = () => {
       currentPage * itemsPerPage
     );
   }, [currentPage, itemsPerPage, sortedData]);
-
-
 
   maxPageNumbersToShow = totalPages > 3 ? 4 : totalPages;
 
@@ -91,7 +90,6 @@ const Accounts = () => {
   const handleChangeName = event => {
     setFilter(event.currentTarget.value);
     setCurrentPage(1);
-
   };
 
   // Функция для изменения столбца сортировки и направления
@@ -102,12 +100,12 @@ const Accounts = () => {
     }
     setSortConfig({ key, direction });
   };
-  
+
   return (
     <div className={css.accountsContainer}>
       <div className={css.accountsContainer__filterBoard}>
         <h1>Table Accounts</h1>
-        
+
         <div className={css.accountsContainer__filterBoard__inputBox}>
           <svg
             width="24"
@@ -129,39 +127,62 @@ const Accounts = () => {
         <thead>
           <tr className={css.accountsContainer__table__tr}>
             <th className={css.accountsContainer__table__tr__indentBgn}></th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('accountId')}>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('accountId')}
+            >
               accountId
             </th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('email')}>email</th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('authToken')}>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('email')}
+            >
+              email
+            </th>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('authToken')}
+            >
               authToken
             </th>
-            <th className={css.accountsContainer__table__tr__th} onClick={() => requestSort('creationDate')}>creationDate</th>
+            <th
+              className={css.accountsContainer__table__tr__th}
+              onClick={() => requestSort('creationDate')}
+            >
+              creationDate
+            </th>
             <th className={css.accountsContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
 
         <tbody>
-            {displayItems.map(filteredAccount => (
-              <tr key={filteredAccount.id} >                                
-                    <td></td>
-                    <td className={css.accountsContainer__table__td}>
-                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.id}</Link>
-                    </td>
-                    <td className={css.accountsContainer__table__td}>
-                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.email}</Link>
-                    </td>
-                    <td className={css.accountsContainer__table__td}>
-                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.authToken}</Link>
-                    </td>
-                    <td className={css.accountsContainer__table__td}>
-                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.creationDate}</Link>
-                    </td>
-                    <td></td>                                  
-              </tr>
-            ))}
+          {displayItems.map(filteredAccount => (
+            <tr key={filteredAccount.id}>
+              <td></td>
+              <td className={css.accountsContainer__table__td}>
+                <Link to={`/profiles/${filteredAccount.id}`}>
+                  {filteredAccount.id}
+                </Link>
+              </td>
+              <td className={css.accountsContainer__table__td}>
+                <Link to={`/profiles/${filteredAccount.id}`}>
+                  {filteredAccount.email}
+                </Link>
+              </td>
+              <td className={css.accountsContainer__table__td}>
+                <Link to={`/profiles/${filteredAccount.id}`}>
+                  {filteredAccount.authToken}
+                </Link>
+              </td>
+              <td className={css.accountsContainer__table__td}>
+                <Link to={`/profiles/${filteredAccount.id}`}>
+                  {filteredAccount.creationDate}
+                </Link>
+              </td>
+              <td></td>
+            </tr>
+          ))}
         </tbody>
-                
       </table>
       <div>
         <button
