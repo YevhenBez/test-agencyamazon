@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import listAccounts from '../../path/to/accounts.json';
 import css from './css/accounts.module.css';
 import sprite from '../../img/svg/sprite-icon.svg';
 
 const Accounts = () => {
-
-  const navigate = useNavigate();
 
   const itemsPerPage = 8;
 
@@ -104,11 +102,7 @@ const Accounts = () => {
     }
     setSortConfig({ key, direction });
   };
-
-  const handleRowClick = () => {
-    navigate(`/profiles`);
-  };
-
+  
   return (
     <div className={css.accountsContainer}>
       <div className={css.accountsContainer__filterBoard}>
@@ -149,21 +143,21 @@ const Accounts = () => {
 
         <tbody>
             {displayItems.map(filteredAccount => (
-              <tr key={filteredAccount.id} onClick={handleRowClick}>
-                <td></td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.id}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.email}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.authToken}
-                </td>
-                <td className={css.accountsContainer__table__td}>
-                  {filteredAccount.creationDate}
-                </td>
-                <td></td>
+              <tr key={filteredAccount.id} >                                
+                    <td></td>
+                    <td className={css.accountsContainer__table__td}>
+                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.id}</Link>
+                    </td>
+                    <td className={css.accountsContainer__table__td}>
+                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.email}</Link>
+                    </td>
+                    <td className={css.accountsContainer__table__td}>
+                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.authToken}</Link>
+                    </td>
+                    <td className={css.accountsContainer__table__td}>
+                      <Link to={`/profiles/${filteredAccount.id}`}>{filteredAccount.creationDate}</Link>
+                    </td>
+                    <td></td>                                  
               </tr>
             ))}
         </tbody>

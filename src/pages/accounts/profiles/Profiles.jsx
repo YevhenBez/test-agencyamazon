@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { useParams } from 'react-router-dom';
 import listAccounts from '../../../path/to/accounts.json';
 import css from './css/profiles.module.css';
 import sprite from '../../../img/svg/sprite-icon.svg';
@@ -6,12 +7,35 @@ import sprite from '../../../img/svg/sprite-icon.svg';
 const Profiles = () => {
   const itemsPerPage = 8;
 
+
+  const { accountId } = useParams();
+
+  const [profilesData, setProfilesData] = useState([]);
   const [filter, setFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(
     Math.ceil(listAccounts.length / itemsPerPage)
   );
   const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
+
+useEffect(() => {
+
+// Функция для загрузки файла JSON
+    const fetchProfilesData = async () => {
+      try {
+        // Динамический импорт файла JSON в зависимости от accountId
+        const { default: jsonData } = await import(`../../../path/to/profiles${accountId}.json`);
+        setProfilesData(jsonData);
+      } catch (error) {
+        console.error('Error fetching profiles data:', error);
+      }
+    };
+
+    fetchProfilesData();
+  
+  }, [accountId]);
+
+  console.log(profilesData);
 
   let maxPageNumbersToShow;
 
