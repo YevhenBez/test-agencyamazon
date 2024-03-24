@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-import listAccounts from '../../../path/to/accounts.json';
 import css from './css/profiles.module.css';
 import sprite from '../../../img/svg/sprite-icon.svg';
 
@@ -13,8 +12,9 @@ const Profiles = () => {
   const [profilesData, setProfilesData] = useState([]);
   const [filter, setFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [jsonLoaded, setJsonLoaded] = useState(true);
   const [totalPages, setTotalPages] = useState(
-    Math.ceil(listAccounts.length / itemsPerPage)
+    Math.ceil(profilesData.length / itemsPerPage)
   );
   const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
 
@@ -26,8 +26,10 @@ useEffect(() => {
         // Динамический импорт файла JSON в зависимости от accountId
         const { default: jsonData } = await import(`../../../path/to/profiles${accountId}.json`);
         setProfilesData(jsonData);
+        setJsonLoaded(true);
       } catch (error) {
         console.error('Error fetching profiles data:', error);
+        setJsonLoaded(false);
       }
     };
 
@@ -35,19 +37,16 @@ useEffect(() => {
   
   }, [accountId]);
 
-  console.log(profilesData);
-
   let maxPageNumbersToShow;
 
   const filteredAccounts = useMemo(() => {
-    return listAccounts.filter(
+    return profilesData.filter(
       row =>
-        row.id.toLowerCase().includes(filter.toLowerCase()) ||
-        row.email.toLowerCase().includes(filter.toLowerCase()) ||
-        row.authToken.toLowerCase().includes(filter.toLowerCase()) ||
-        row.creationDate.includes(filter)
+        row.profileId.toLowerCase().includes(filter.toLowerCase()) ||
+        row.country.toLowerCase().includes(filter.toLowerCase()) ||
+        row.marketplace.toLowerCase().includes(filter.toLowerCase()) 
     );
-  }, [filter]);
+  }, [filter, profilesData]);
 
   // Обновление totalPages
   useEffect(() => {
@@ -128,7 +127,7 @@ useEffect(() => {
     <div className={css.accountsContainer}>
       <div className={css.accountsContainer__filterBoard}>
         <h1>Table Profiles</h1>
-
+        {jsonLoaded ? (<p className={css.accountsContainer__filterBoard__ID}>ID <span className={css.accountsContainer__filterBoard__ID__number}>{accountId}</span></p>) : (<p className={css.accountsContainer__filterBoard__error}>Everything is fine. The site is working. I just haven't created a JSON file for the row you clicked on in the Accounts table. I have created a JSON file only for the first three rows of the Accounts table.</p>)}
         <div className={css.accountsContainer__filterBoard__inputBox}>
           <svg
             width="24"
@@ -152,48 +151,39 @@ useEffect(() => {
             <th className={css.accountsContainer__table__tr__indentBgn}></th>
             <th
               className={css.accountsContainer__table__tr__th}
-              onClick={() => requestSort('accountId')}
+              onClick={() => requestSort('profileId')}
             >
-              accountId
+              profileId
             </th>
             <th
               className={css.accountsContainer__table__tr__th}
-              onClick={() => requestSort('email')}
+              onClick={() => requestSort('country')}
             >
-              email
+              country
             </th>
             <th
               className={css.accountsContainer__table__tr__th}
-              onClick={() => requestSort('authToken')}
+              onClick={() => requestSort('marketplace')}
             >
-              authToken
-            </th>
-            <th
-              className={css.accountsContainer__table__tr__th}
-              onClick={() => requestSort('creationDate')}
-            >
-              creationDate
-            </th>
+              marketplace
+            </th>            
             <th className={css.accountsContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
 
         <tbody>
           {displayItems.map(filteredAccount => (
-            <tr key={filteredAccount.id}>
+            <tr key={filteredAccount.profileId}>
               <td></td>
               <td className={css.accountsContainer__table__td}>
-                {filteredAccount.id}
+                {filteredAccount.profileId}
               </td>
               <td className={css.accountsContainer__table__td}>
-                {filteredAccount.email}
+                {filteredAccount.country}
               </td>
               <td className={css.accountsContainer__table__td}>
-                {filteredAccount.authToken}
-              </td>
-              <td className={css.accountsContainer__table__td}>
-                {filteredAccount.creationDate}
-              </td>
+                {filteredAccount.marketplace}
+              </td>              
               <td></td>
             </tr>
           ))}

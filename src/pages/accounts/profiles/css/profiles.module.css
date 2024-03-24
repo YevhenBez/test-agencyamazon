@@ -10,6 +10,19 @@
     padding: 30px 53px 40px 38px;
 }
 
+.accountsContainer__filterBoard__ID {
+    color: black;
+    font-weight: 700;
+}
+
+.accountsContainer__filterBoard__ID__number {
+    color: green;
+}
+
+.accountsContainer__filterBoard__error {
+padding-left: 10px;
+}
+
 .accountsContainer__filterBoard__inputBox {
     position: relative;
 }
