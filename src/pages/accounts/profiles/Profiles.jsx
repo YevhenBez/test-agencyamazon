@@ -137,7 +137,7 @@ const Profiles = () => {
           <p className={css.accountsContainer__filterBoard__error}>
             Everything is fine. The site is working. I just haven't created a
             JSON file for the row you clicked on in the Accounts table. I have
-            created a JSON file only for the first three rows of the Accounts
+            created a JSON file only for the first eight rows of the Accounts
             table.
           </p>
         )}
