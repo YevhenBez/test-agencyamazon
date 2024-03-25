@@ -23,7 +23,7 @@ const Profiles = () => {
       try {
         // Динамический импорт файла JSON в зависимости от accountId
         const { default: jsonData } = await import(
-          `../../../path/to/profiles${accountId}.json`
+          `../../../path/to/profilesData/profiles${accountId}.json`
         );
         setProfilesData(jsonData);
         setJsonLoaded(true);
