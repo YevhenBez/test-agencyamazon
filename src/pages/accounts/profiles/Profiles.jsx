@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import css from './css/profiles.module.css';
 import sprite from '../../../img/svg/sprite-icon.svg';
 
@@ -141,6 +141,9 @@ const Profiles = () => {
             table.
           </p>
         )}
+        <Link to="/">
+        <button type="button">back</button>
+        </Link>
         <div className={css.accountsContainer__filterBoard__inputBox}>
           <svg
             width="24"
