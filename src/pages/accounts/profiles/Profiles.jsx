@@ -123,18 +123,18 @@ const Profiles = () => {
   };
 
   return (
-    <div className={css.accountsContainer}>
-      <div className={css.accountsContainer__filterBoard}>
+    <div className={css.profilesContainer}>
+      <div className={css.profilesContainer__filterBoard}>
         <h1>Table Profiles</h1>
         {jsonLoaded ? (
-          <p className={css.accountsContainer__filterBoard__ID}>
+          <p className={css.profilesContainer__filterBoard__ID}>
             ID{' '}
-            <span className={css.accountsContainer__filterBoard__ID__number}>
+            <span className={css.profilesContainer__filterBoard__ID__number}>
               {accountId}
             </span>
           </p>
         ) : (
-          <p className={css.accountsContainer__filterBoard__error}>
+          <p className={css.profilesContainer__filterBoard__error}>
             Everything is fine. The site is working. I just haven't created a
             JSON file for the row you clicked on in the Accounts table. I have
             created a JSON file only for the first eight rows of the Accounts
@@ -144,11 +144,11 @@ const Profiles = () => {
         <Link to="/">
         <button type="button">back</button>
         </Link>
-        <div className={css.accountsContainer__filterBoard__inputBox}>
+        <div className={css.profilesContainer__filterBoard__inputBox}>
           <svg
             width="24"
             height="24"
-            className={css.accountsContainer__filterBoard__inputBox__svg}
+            className={css.profilesContainer__filterBoard__inputBox__svg}
           >
             <use xlinkHref={`${sprite}#search`} />
           </svg>
@@ -157,33 +157,33 @@ const Profiles = () => {
             value={filter}
             onChange={handleChangeName}
             placeholder="Search"
-            className={css.accountsContainer__filterBoard__inputBox__input}
+            className={css.profilesContainer__filterBoard__inputBox__input}
           />
         </div>
       </div>
-      <table className={css.accountsContainer__table}>
+      <table className={css.profilesContainer__table}>
         <thead>
-          <tr className={css.accountsContainer__table__tr}>
-            <th className={css.accountsContainer__table__tr__indentBgn}></th>
+          <tr className={css.profilesContainer__table__tr}>
+            <th className={css.profilesContainer__table__tr__indentBgn}></th>
             <th
-              className={css.accountsContainer__table__tr__th}
+              className={css.profilesContainer__table__tr__th}
               onClick={() => requestSort('profileId')}
             >
               profileId
             </th>
             <th
-              className={css.accountsContainer__table__tr__th}
+              className={css.profilesContainer__table__tr__th}
               onClick={() => requestSort('country')}
             >
               country
             </th>
             <th
-              className={css.accountsContainer__table__tr__th}
+              className={css.profilesContainer__table__tr__th}
               onClick={() => requestSort('marketplace')}
             >
               marketplace
             </th>
-            <th className={css.accountsContainer__table__tr__indentEnd}></th>
+            <th className={css.profilesContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
 
@@ -191,13 +191,13 @@ const Profiles = () => {
           {displayItems.map(filteredAccount => (
             <tr key={filteredAccount.profileId}>
               <td></td>
-              <td className={css.accountsContainer__table__td}>
+              <td className={css.profilesContainer__table__td}>
                 {filteredAccount.profileId}
               </td>
-              <td className={css.accountsContainer__table__td}>
+              <td className={css.profilesContainer__table__td}>
                 {filteredAccount.country}
               </td>
-              <td className={css.accountsContainer__table__td}>
+              <td className={css.profilesContainer__table__td}>
                 {filteredAccount.marketplace}
               </td>
               <td></td>

@@ -1,40 +1,40 @@
-.accountsContainer {
+.profilesContainer {
     background-color: #ffffff;
     border-radius: 30px;
 }
 
-.accountsContainer__filterBoard {
+.profilesContainer__filterBoard {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 53px 40px 38px;
 }
 
-.accountsContainer__filterBoard__ID {
+.profilesContainer__filterBoard__ID {
     color: black;
     font-weight: 700;
 }
 
-.accountsContainer__filterBoard__ID__number {
+.profilesContainer__filterBoard__ID__number {
     color: green;
 }
 
-.accountsContainer__filterBoard__error {
+.profilesContainer__filterBoard__error {
 padding-left: 10px;
 }
 
-.accountsContainer__filterBoard__inputBox {
+.profilesContainer__filterBoard__inputBox {
     position: relative;
 }
 
-.accountsContainer__filterBoard__inputBox__svg {
+.profilesContainer__filterBoard__inputBox__svg {
     position: absolute;
     right: 210px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.accountsContainer__filterBoard__inputBox__input {
+.profilesContainer__filterBoard__inputBox__input {
     padding: 10px 0px 10px 40px;
     width: 200px;
     border-radius: 5px;
@@ -42,26 +42,26 @@ padding-left: 10px;
     border: 0px;
 }
 
-.accountsContainer__filterBoard__inputBox__input::placeholder {
+.profilesContainer__filterBoard__inputBox__input::placeholder {
     color: #b5b7c0;
     font-size: 12px;
     font-weight: 500;
 }
 
-.accountsContainer__table {
+.profilesContainer__table {
     width: 100%;
 
     border-collapse: collapse;
 }
 
-.accountsContainer__table__tr__indentBgn {
+.profilesContainer__table__tr__indentBgn {
     padding-bottom: 14px;
     border-bottom: 1px solid rgb(230, 228, 228);
 
     width: 38px;
 }
 
-.accountsContainer__table__tr__th {
+.profilesContainer__table__tr__th {
     padding-bottom: 14px;
     border-bottom: 1px solid rgb(230, 228, 228);
 
@@ -74,18 +74,18 @@ padding-left: 10px;
     cursor: pointer;
 }
 
-.accountsContainer__table__tr__indentEnd {
+.profilesContainer__table__tr__indentEnd {
     padding-bottom: 14px;
     border-bottom: 1px solid rgb(230, 228, 228);
 
     width: 44px;
 }
 
-.accountsContainer__table__tr:nth-child(even) {
+.profilesContainer__table__tr:nth-child(even) {
     background-color: #eee;
 }
 
-.accountsContainer__table__td {
+.profilesContainer__table__td {
     text-align: left;
 
     padding: 0px 60px 0px 0px;
