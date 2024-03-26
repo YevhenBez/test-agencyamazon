@@ -23,6 +23,13 @@
 padding-left: 10px;
 }
 
+.profilesContainer__filterBoard__btn {
+    border-radius: 8px;
+    font-weight: 800;
+    color: red;
+    border-color: red;
+}
+
 .profilesContainer__filterBoard__inputBox {
     position: relative;
 }
