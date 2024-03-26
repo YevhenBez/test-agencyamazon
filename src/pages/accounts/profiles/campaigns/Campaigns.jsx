@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import css from './css/profiles.module.css';
-import sprite from '../../../img/svg/sprite-icon.svg';
+import css from './css/campaigns.module.css';
+import sprite from '../../../../img/svg/sprite-icon.svg';
 
-const Profiles = () => {
+const Campaigns = () => {
   const itemsPerPage = 8;
 
-  const { accountId } = useParams();
+  const { accountId, profilesId } = useParams();
 
   const [profilesData, setProfilesData] = useState([]);
   const [filter, setFilter] = useState('');
@@ -23,7 +23,8 @@ const Profiles = () => {
       try {
         // Динамический импорт файла JSON в зависимости от accountId
         const { default: jsonData } = await import(
-          `../../../path/to/profilesData/profiles${accountId}.json`
+          //   `../../../../path/to/profilesData/profiles${profilesId}.json`
+          `../../../../path/to/profilesData/profiles1e0700a2-5183-4291-85cc-2065a036a683.json`
         );
         setProfilesData(jsonData);
         setJsonLoaded(true);
@@ -125,12 +126,12 @@ const Profiles = () => {
   return (
     <div className={css.profilesContainer}>
       <div className={css.profilesContainer__filterBoard}>
-        <h1>Table Profiles</h1>
+        <h1>Table Campaigns</h1>
         {jsonLoaded ? (
           <p className={css.profilesContainer__filterBoard__ID}>
             ID{' '}
             <span className={css.profilesContainer__filterBoard__ID__number}>
-              {accountId}
+              {profilesId}
             </span>
           </p>
         ) : (
@@ -138,11 +139,19 @@ const Profiles = () => {
             Everything is fine. The site is working. I just haven't created a
             JSON file for the row you clicked on in the Accounts table. I have
             created a JSON file only for the first eight rows of the Accounts
-            table. Please click on the back button and then select one of the first eight lines.
+            table. Please click on the back button and then select one of the
+            first eight lines.
           </p>
         )}
-        <Link to="/">
-        <button type="button" className={!jsonLoaded ? css.profilesContainer__filterBoard__btn : ''}>back</button>
+        <Link to={`/profiles/${accountId}`}>
+          <button
+            type="button"
+            className={
+              !jsonLoaded ? css.profilesContainer__filterBoard__btn : ''
+            }
+          >
+            back
+          </button>
         </Link>
         <div className={css.profilesContainer__filterBoard__inputBox}>
           <svg
@@ -192,13 +201,13 @@ const Profiles = () => {
             <tr key={filteredAccount.profileId}>
               <td></td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredAccount.profileId}`}>{filteredAccount.profileId}</Link>
+                {filteredAccount.profileId}
               </td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredAccount.profileId}`}>{filteredAccount.country}</Link>
+                {filteredAccount.country}
               </td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredAccount.profileId}`}>{filteredAccount.marketplace}</Link>
+                {filteredAccount.marketplace}
               </td>
               <td></td>
             </tr>
@@ -243,4 +252,4 @@ const Profiles = () => {
   );
 };
 
-export default Profiles;
+export default Campaigns;
