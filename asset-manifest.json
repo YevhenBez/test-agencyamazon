@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/test-agencyamazon/static/css/main.f4fb6255.css",
-    "main.js": "/test-agencyamazon/static/js/main.407604d1.js",
+    "main.js": "/test-agencyamazon/static/js/main.7f8eec74.js",
     "static/css/953.b931db6b.chunk.css": "/test-agencyamazon/static/css/953.b931db6b.chunk.css",
     "static/js/953.c8a193e8.chunk.js": "/test-agencyamazon/static/js/953.c8a193e8.chunk.js",
-    "static/css/56.f50a7e27.chunk.css": "/test-agencyamazon/static/css/56.f50a7e27.chunk.css",
-    "static/js/56.1c0437dd.chunk.js": "/test-agencyamazon/static/js/56.1c0437dd.chunk.js",
+    "static/css/56.afc8c19e.chunk.css": "/test-agencyamazon/static/css/56.afc8c19e.chunk.css",
+    "static/js/56.d54f8af6.chunk.js": "/test-agencyamazon/static/js/56.d54f8af6.chunk.js",
     "static/js/518.eae89f24.chunk.js": "/test-agencyamazon/static/js/518.eae89f24.chunk.js",
     "static/js/664.37467bfc.chunk.js": "/test-agencyamazon/static/js/664.37467bfc.chunk.js",
     "static/js/453.76cdff1b.chunk.js": "/test-agencyamazon/static/js/453.76cdff1b.chunk.js",
@@ -18,15 +18,15 @@
     "static/media/sprite-icon.svg": "/test-agencyamazon/static/media/sprite-icon.522b37125ab1dddda7e5594f4c9b4fc9.svg",
     "index.html": "/test-agencyamazon/index.html",
     "main.f4fb6255.css.map": "/test-agencyamazon/static/css/main.f4fb6255.css.map",
-    "main.407604d1.js.map": "/test-agencyamazon/static/js/main.407604d1.js.map",
+    "main.7f8eec74.js.map": "/test-agencyamazon/static/js/main.7f8eec74.js.map",
     "953.b931db6b.chunk.css.map": "/test-agencyamazon/static/css/953.b931db6b.chunk.css.map",
     "953.c8a193e8.chunk.js.map": "/test-agencyamazon/static/js/953.c8a193e8.chunk.js.map",
-    "56.f50a7e27.chunk.css.map": "/test-agencyamazon/static/css/56.f50a7e27.chunk.css.map",
-    "56.1c0437dd.chunk.js.map": "/test-agencyamazon/static/js/56.1c0437dd.chunk.js.map",
+    "56.afc8c19e.chunk.css.map": "/test-agencyamazon/static/css/56.afc8c19e.chunk.css.map",
+    "56.d54f8af6.chunk.js.map": "/test-agencyamazon/static/js/56.d54f8af6.chunk.js.map",
     "518.eae89f24.chunk.js.map": "/test-agencyamazon/static/js/518.eae89f24.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4fb6255.css",
-    "static/js/main.407604d1.js"
+    "static/js/main.7f8eec74.js"
   ]
 }
