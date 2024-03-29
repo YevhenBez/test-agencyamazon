@@ -8,25 +8,24 @@ const Campaigns = () => {
 
   const { accountId, profilesId } = useParams();
 
-  const [profilesData, setProfilesData] = useState([]);
+  const [campaignsData, setCampaignsData] = useState([]);
   const [filter, setFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [jsonLoaded, setJsonLoaded] = useState(true);
   const [totalPages, setTotalPages] = useState(
-    Math.ceil(profilesData.length / itemsPerPage)
+    Math.ceil(campaignsData.length / itemsPerPage)
   );
   const [sortConfig, setSortConfig] = useState({ key: null, direction: null });
 
   useEffect(() => {
     // Функция для загрузки файла JSON
-    const fetchProfilesData = async () => {
+    const fetchCampaignsData = async () => {
       try {
         // Динамический импорт файла JSON в зависимости от accountId
         const { default: jsonData } = await import(
-          //   `../../../../path/to/profilesData/profiles${profilesId}.json`
-          `../../../../path/to/profilesData/profiles1e0700a2-5183-4291-85cc-2065a036a683.json`
+          `../../../../path/to/campaignsData/campaigns${profilesId}.json`
         );
-        setProfilesData(jsonData);
+        setCampaignsData(jsonData);
         setJsonLoaded(true);
       } catch (error) {
         console.error('Error fetching profiles data:', error);
@@ -34,36 +33,37 @@ const Campaigns = () => {
       }
     };
 
-    fetchProfilesData();
-  }, [accountId]);
+    fetchCampaignsData();
+  }, [profilesId]);
 
   let maxPageNumbersToShow;
 
-  const filteredAccounts = useMemo(() => {
-    return profilesData.filter(
+  const filteredCampaigns = useMemo(() => {
+    return campaignsData.filter(
       row =>
-        row.profileId.toLowerCase().includes(filter.toLowerCase()) ||
-        row.country.toLowerCase().includes(filter.toLowerCase()) ||
-        row.marketplace.toLowerCase().includes(filter.toLowerCase())
+        row.campaignId.toLowerCase().includes(filter.toLowerCase()) ||
+        row.clicks.includes(filter) ||
+        row.cost.includes(filter) ||
+        row.date.includes(filter)
     );
-  }, [filter, profilesData]);
+  }, [filter, campaignsData]);
 
   // Обновление totalPages
   useEffect(() => {
-    const newTotalPages = Math.ceil(filteredAccounts.length / itemsPerPage);
+    const newTotalPages = Math.ceil(filteredCampaigns.length / itemsPerPage);
     setTotalPages(newTotalPages);
-  }, [filter, filteredAccounts, itemsPerPage]);
+  }, [filter, filteredCampaigns, itemsPerPage]);
 
   // Обновление currentPage
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(1);
     }
-  }, [currentPage, itemsPerPage, filteredAccounts, totalPages]);
+  }, [currentPage, itemsPerPage, filteredCampaigns, totalPages]);
 
   // Функция для сортировки данных
   const sortedData = sortConfig.key
-    ? [...filteredAccounts].sort((a, b) => {
+    ? [...filteredCampaigns].sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
           return sortConfig.direction === 'ascending' ? -1 : 1;
         }
@@ -72,7 +72,7 @@ const Campaigns = () => {
         }
         return 0;
       })
-    : filteredAccounts;
+    : filteredCampaigns;
 
   const displayItems = useMemo(() => {
     return sortedData.slice(
@@ -176,38 +176,47 @@ const Campaigns = () => {
             <th className={css.profilesContainer__table__tr__indentBgn}></th>
             <th
               className={css.profilesContainer__table__tr__th}
-              onClick={() => requestSort('profileId')}
+              onClick={() => requestSort('campaignId')}
             >
-              profileId
+              campaignId
             </th>
             <th
               className={css.profilesContainer__table__tr__th}
-              onClick={() => requestSort('country')}
+              onClick={() => requestSort('clicks')}
             >
-              country
+              clicks
             </th>
             <th
               className={css.profilesContainer__table__tr__th}
-              onClick={() => requestSort('marketplace')}
+              onClick={() => requestSort('cost')}
             >
-              marketplace
+              cost (USD)
+            </th>
+            <th
+              className={css.profilesContainer__table__tr__th}
+              onClick={() => requestSort('date')}
+            >
+              date
             </th>
             <th className={css.profilesContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
 
         <tbody>
-          {displayItems.map(filteredAccount => (
-            <tr key={filteredAccount.profileId}>
+          {displayItems.map(filteredCampaign => (
+            <tr key={filteredCampaign.campaignId}>
               <td></td>
               <td className={css.profilesContainer__table__td}>
-                {filteredAccount.profileId}
+                {filteredCampaign.campaignId}
               </td>
               <td className={css.profilesContainer__table__td}>
-                {filteredAccount.country}
+                {filteredCampaign.clicks}
               </td>
               <td className={css.profilesContainer__table__td}>
-                {filteredAccount.marketplace}
+                {filteredCampaign.cost}
+              </td>
+              <td className={css.profilesContainer__table__td}>
+                {filteredCampaign.date}
               </td>
               <td></td>
             </tr>
