@@ -42,10 +42,10 @@ const Campaigns = () => {
     return campaignsData.filter(
       row =>
         row.campaignId.toLowerCase().includes(filter.toLowerCase()) ||
-        row.clicks.includes(filter) ||
-        row.cost.includes(filter) ||
-        row.date.includes(filter)
-    );
+        row.clicks.toString().includes(filter) ||
+        row.cost.toFixed(2).toString().includes(filter) ||          
+        row.date.includes(filter)        
+      );
   }, [filter, campaignsData]);
 
   // Обновление totalPages
