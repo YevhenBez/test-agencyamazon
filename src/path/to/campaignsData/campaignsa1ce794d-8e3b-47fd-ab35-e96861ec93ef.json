@@ -1,0 +1,290 @@
+[
+  {
+    "campaignId": "3b78599a-e6ab-441a-9e54-3cd7955b87a3",
+    "clicks": 94,
+    "cost": 56.52,
+    "date": "2023-09-22 line 5/6"
+  },
+  {
+    "campaignId": "be126d40-154a-4840-8298-d247abb909ba",
+    "clicks": 662,
+    "cost": 13.43,
+    "date": "2023-11-10 line 5/6"
+  },
+  {
+    "campaignId": "19d243a6-1817-42b4-89b7-f4e3fae9a42e",
+    "clicks": 245,
+    "cost": 31.54,
+    "date": "2023-12-25 line 5/6"
+  },
+  {
+    "campaignId": "180588e9-81a0-4b25-9291-00a733cb68b9",
+    "clicks": 33,
+    "cost": 99.25,
+    "date": "2023-08-26 line 5/6"
+  },
+  {
+    "campaignId": "52d38743-db8d-4ab9-8388-2ea3e50697df",
+    "clicks": 500,
+    "cost": 48.64,
+    "date": "2023-07-08 line 5/6"
+  },
+  {
+    "campaignId": "9bba13bb-bcac-4a78-bdf4-a273652a4f8e",
+    "clicks": 415,
+    "cost": 46.41,
+    "date": "2022-02-06 line 5/6"
+  },
+  {
+    "campaignId": "6febe87b-0c34-41ae-a5d9-3bedfa3b71bc",
+    "clicks": 61,
+    "cost": 58.85,
+    "date": "2023-10-18 line 5/6"
+  },
+  {
+    "campaignId": "cad6d367-ff12-4a10-aaa0-10b92428f374",
+    "clicks": 602,
+    "cost": 40.04,
+    "date": "2023-03-17 line 5/6"
+  },
+  {
+    "campaignId": "b48f3128-da56-433e-a4cd-1a6194c67956",
+    "clicks": 795,
+    "cost": 66.91,
+    "date": "2022-02-26 line 5/6"
+  },
+  {
+    "campaignId": "6bc34b7f-54c2-40a7-b92d-3b5515cbb783",
+    "clicks": 837,
+    "cost": 98.67,
+    "date": "2022-01-24 line 5/6"
+  },
+  {
+    "campaignId": "86847cce-faee-4e38-ab9d-c0afa0868123",
+    "clicks": 715,
+    "cost": 81.86,
+    "date": "2022-05-04 line 5/6"
+  },
+  {
+    "campaignId": "6d7996ab-8fca-4229-8ed7-a2b3d72cd50b",
+    "clicks": 415,
+    "cost": 81.27,
+    "date": "2022-02-18 line 5/6"
+  },
+  {
+    "campaignId": "bd352b0c-c65e-44d0-8bfe-42bd6693645b",
+    "clicks": 527,
+    "cost": 37.62,
+    "date": "2024-02-16 line 5/6"
+  },
+  {
+    "campaignId": "74768d31-8709-4502-9db9-9269008e5e3d",
+    "clicks": 844,
+    "cost": 27.28,
+    "date": "2023-08-21 line 5/6"
+  },
+  {
+    "campaignId": "149e7387-72b1-4e92-ab9e-357b265abce2",
+    "clicks": 93,
+    "cost": 75.34,
+    "date": "2023-02-12 line 5/6"
+  },
+  {
+    "campaignId": "1e2434ba-745d-42b4-9b84-7c15882946dc",
+    "clicks": 640,
+    "cost": 57.63,
+    "date": "2022-10-11 line 5/6"
+  },
+  {
+    "campaignId": "a8868a09-4140-4395-bb31-65914421130d",
+    "clicks": 817,
+    "cost": 16.46,
+    "date": "2022-12-02 line 5/6"
+  },
+  {
+    "campaignId": "b4f4dfc9-5819-416b-9741-e32de96a2706",
+    "clicks": 914,
+    "cost": 8.12,
+    "date": "2024-01-16 line 5/6"
+  },
+  {
+    "campaignId": "2821dd89-792c-4c79-87a0-1b4e56457505",
+    "clicks": 53,
+    "cost": 78.48,
+    "date": "2023-03-29 line 5/6"
+  },
+  {
+    "campaignId": "ff7c8ad3-1b48-4a78-afa5-10bc9683f7ea",
+    "clicks": 610,
+    "cost": 37.38,
+    "date": "2022-03-29 line 5/6"
+  },
+  {
+    "campaignId": "615894b7-365d-4c52-8cfe-3a66378350a2",
+    "clicks": 682,
+    "cost": 13.4,
+    "date": "2023-11-20 line 5/6"
+  },
+  {
+    "campaignId": "1117a9e3-0ff2-4ec1-bcf3-c0b95f6dd35c",
+    "clicks": 658,
+    "cost": 78.25,
+    "date": "2023-06-08 line 5/6"
+  },
+  {
+    "campaignId": "82882baa-e7ac-4ef7-9db0-94a8fd13a703",
+    "clicks": 316,
+    "cost": 33.76,
+    "date": "2022-07-22 line 5/6"
+  },
+  {
+    "campaignId": "d1803839-ac8d-4614-ab23-00b9c09d8644",
+    "clicks": 612,
+    "cost": 66.01,
+    "date": "2022-03-04 line 5/6"
+  },
+  {
+    "campaignId": "cb8553c2-a364-4044-a2d0-2a91d47b28fd",
+    "clicks": 834,
+    "cost": 30.08,
+    "date": "2022-11-06 line 5/6"
+  },
+  {
+    "campaignId": "9cab423e-de93-4d0f-9b48-1fc51839beee",
+    "clicks": 7,
+    "cost": 86.44,
+    "date": "2024-01-19 line 5/6"
+  },
+  {
+    "campaignId": "b09074f6-c5d2-41b1-b939-2e7d4b865467",
+    "clicks": 640,
+    "cost": 59.58,
+    "date": "2023-02-23 line 5/6"
+  },
+  {
+    "campaignId": "098ec349-cc8e-48b3-806f-02f3eb5dde9d",
+    "clicks": 747,
+    "cost": 55.23,
+    "date": "2022-01-14 line 5/6"
+  },
+  {
+    "campaignId": "509965e4-21c2-4793-8514-db7db7a1da22",
+    "clicks": 477,
+    "cost": 87.79,
+    "date": "2023-04-14 line 5/6"
+  },
+  {
+    "campaignId": "3f6e8ad3-6e98-4fbd-86f8-0c5ee174095d",
+    "clicks": 845,
+    "cost": 60.38,
+    "date": "2023-03-07 line 5/6"
+  },
+  {
+    "campaignId": "aeda6f4f-6065-4398-94aa-66021b8f698a",
+    "clicks": 383,
+    "cost": 90.79,
+    "date": "2022-08-11 line 5/6"
+  },
+  {
+    "campaignId": "fc953b0d-df27-4c4b-876e-9001ba9907bf",
+    "clicks": 462,
+    "cost": 80.21,
+    "date": "2023-02-08 line 5/6"
+  },
+  {
+    "campaignId": "5210af59-6745-4a98-aa75-f2bcba6ace6d",
+    "clicks": 253,
+    "cost": 77.68,
+    "date": "2023-11-27 line 5/6"
+  },
+  {
+    "campaignId": "834a6759-e019-4059-971f-8b8413f1f8f6",
+    "clicks": 508,
+    "cost": 6.85,
+    "date": "2023-07-30 line 5/6"
+  },
+  {
+    "campaignId": "9d90eae4-0c61-4f0c-9c1c-6c699a7c807f",
+    "clicks": 608,
+    "cost": 0.22,
+    "date": "2022-12-02 line 5/6"
+  },
+  {
+    "campaignId": "65366116-001e-4ef2-8864-6bd68d0b5539",
+    "clicks": 244,
+    "cost": 51.23,
+    "date": "2022-10-23 line 5/6"
+  },
+  {
+    "campaignId": "c1451497-0430-4c1d-b034-f2d48e91d37c",
+    "clicks": 484,
+    "cost": 23.56,
+    "date": "2024-01-04 line 5/6"
+  },
+  {
+    "campaignId": "d59b6973-d24e-46c4-883e-23d5f0095fe7",
+    "clicks": 807,
+    "cost": 22.17,
+    "date": "2024-03-30 line 5/6"
+  },
+  {
+    "campaignId": "fa5631cc-756e-420e-8e4d-8f6e1ff05c64",
+    "clicks": 58,
+    "cost": 19.72,
+    "date": "2023-07-12 line 5/6"
+  },
+  {
+    "campaignId": "f1d268ad-2ba4-492f-a20f-c91f575e963e",
+    "clicks": 350,
+    "cost": 84.67,
+    "date": "2022-09-11 line 5/6"
+  },
+  {
+    "campaignId": "db2e12e1-47ed-4638-bb3d-0478f62e6753",
+    "clicks": 72,
+    "cost": 94.01,
+    "date": "2023-03-30 line 5/6"
+  },
+  {
+    "campaignId": "15afbd51-5319-4e75-8627-0ed9f9a39847",
+    "clicks": 738,
+    "cost": 58.85,
+    "date": "2022-05-09 line 5/6"
+  },
+  {
+    "campaignId": "f81e6e8f-c93e-4d6f-ac11-ba7c48fc037c",
+    "clicks": 811,
+    "cost": 19.66,
+    "date": "2023-02-06 line 5/6"
+  },
+  {
+    "campaignId": "fe719a3b-21f2-4833-99da-74e6e980193a",
+    "clicks": 677,
+    "cost": 69.69,
+    "date": "2023-11-29 line 5/6"
+  },
+  {
+    "campaignId": "0188cf0f-371b-447e-bc18-2fa03bdf68b4",
+    "clicks": 750,
+    "cost": 27.69,
+    "date": "2022-03-26 line 5/6"
+  },
+  {
+    "campaignId": "eccb1693-34c4-4ea1-a510-72dad91bf901",
+    "clicks": 988,
+    "cost": 45.93,
+    "date": "2024-02-29 line 5/6"
+  },
+  {
+    "campaignId": "da7da285-3d05-43cc-9d90-d29c36b52c85",
+    "clicks": 209,
+    "cost": 75.56,
+    "date": "2022-05-28 line 5/6"
+  },
+  {
+    "campaignId": "653b5d52-945d-48c5-9b52-03c2a1c32a9b",
+    "clicks": 472,
+    "cost": 16.45,
+    "date": "2022-11-14 line 5/6"
+  }
+]
