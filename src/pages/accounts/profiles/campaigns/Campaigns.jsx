@@ -124,18 +124,18 @@ const Campaigns = () => {
   };
 
   return (
-    <div className={css.profilesContainer}>
-      <div className={css.profilesContainer__filterBoard}>
+    <div className={css.campaignsContainer}>
+      <div className={css.campaignsContainer__filterBoard}>
         <h1>Table Campaigns</h1>
         {jsonLoaded ? (
-          <p className={css.profilesContainer__filterBoard__ID}>
+          <p className={css.campaignsContainer__filterBoard__ID}>
             ID{' '}
-            <span className={css.profilesContainer__filterBoard__ID__number}>
+            <span className={css.campaignsContainer__filterBoard__ID__number}>
               {profilesId}
             </span>
           </p>
         ) : (
-          <p className={css.profilesContainer__filterBoard__error}>
+          <p className={css.campaignsContainer__filterBoard__error}>
             Everything is fine. The site is working. I just haven't created a
             JSON file for the row you clicked on in the Accounts table. I have
             created a JSON file only for the first eight rows of the Accounts
@@ -147,17 +147,17 @@ const Campaigns = () => {
           <button
             type="button"
             className={
-              !jsonLoaded ? css.profilesContainer__filterBoard__btn : ''
+              !jsonLoaded ? css.campaignsContainer__filterBoard__btn : ''
             }
           >
             back
           </button>
         </Link>
-        <div className={css.profilesContainer__filterBoard__inputBox}>
+        <div className={css.campaignsContainer__filterBoard__inputBox}>
           <svg
             width="24"
             height="24"
-            className={css.profilesContainer__filterBoard__inputBox__svg}
+            className={css.campaignsContainer__filterBoard__inputBox__svg}
           >
             <use xlinkHref={`${sprite}#search`} />
           </svg>
@@ -166,39 +166,39 @@ const Campaigns = () => {
             value={filter}
             onChange={handleChangeName}
             placeholder="Search"
-            className={css.profilesContainer__filterBoard__inputBox__input}
+            className={css.campaignsContainer__filterBoard__inputBox__input}
           />
         </div>
       </div>
-      <table className={css.profilesContainer__table}>
+      <table className={css.campaignsContainer__table}>
         <thead>
-          <tr className={css.profilesContainer__table__tr}>
-            <th className={css.profilesContainer__table__tr__indentBgn}></th>
+          <tr className={css.campaignsContainer__table__tr}>
+            <th className={css.campaignsContainer__table__tr__indentBgn}></th>
             <th
-              className={css.profilesContainer__table__tr__th}
+              className={css.campaignsContainer__table__tr__th}
               onClick={() => requestSort('campaignId')}
             >
               campaignId
             </th>
             <th
-              className={css.profilesContainer__table__tr__th}
+              className={css.campaignsContainer__table__tr__th}
               onClick={() => requestSort('clicks')}
             >
               clicks
             </th>
             <th
-              className={css.profilesContainer__table__tr__th}
+              className={css.campaignsContainer__table__tr__th}
               onClick={() => requestSort('cost')}
             >
               cost (USD)
             </th>
             <th
-              className={css.profilesContainer__table__tr__th}
+              className={css.campaignsContainer__table__tr__th}
               onClick={() => requestSort('date')}
             >
               date
             </th>
-            <th className={css.profilesContainer__table__tr__indentEnd}></th>
+            <th className={css.campaignsContainer__table__tr__indentEnd}></th>
           </tr>
         </thead>
 
@@ -206,16 +206,16 @@ const Campaigns = () => {
           {displayItems.map(filteredCampaign => (
             <tr key={filteredCampaign.campaignId}>
               <td></td>
-              <td className={css.profilesContainer__table__td}>
+              <td className={css.campaignsContainer__table__td}>
                 {filteredCampaign.campaignId}
               </td>
-              <td className={css.profilesContainer__table__td}>
+              <td className={css.campaignsContainer__table__td}>
                 {filteredCampaign.clicks}
               </td>
-              <td className={css.profilesContainer__table__td}>
+              <td className={css.campaignsContainer__table__td}>
                 {filteredCampaign.cost}
               </td>
-              <td className={css.profilesContainer__table__td}>
+              <td className={css.campaignsContainer__table__td}>
                 {filteredCampaign.date}
               </td>
               <td></td>
