@@ -38,7 +38,7 @@ const Profiles = () => {
 
   let maxPageNumbersToShow;
 
-  const filteredAccounts = useMemo(() => {
+  const filteredProfiles = useMemo(() => {
     return profilesData.filter(
       row =>
         row.profileId.toLowerCase().includes(filter.toLowerCase()) ||
@@ -49,20 +49,20 @@ const Profiles = () => {
 
   // Обновление totalPages
   useEffect(() => {
-    const newTotalPages = Math.ceil(filteredAccounts.length / itemsPerPage);
+    const newTotalPages = Math.ceil(filteredProfiles.length / itemsPerPage);
     setTotalPages(newTotalPages);
-  }, [filter, filteredAccounts, itemsPerPage]);
+  }, [filter, filteredProfiles, itemsPerPage]);
 
   // Обновление currentPage
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(1);
     }
-  }, [currentPage, itemsPerPage, filteredAccounts, totalPages]);
+  }, [currentPage, itemsPerPage, filteredProfiles, totalPages]);
 
   // Функция для сортировки данных
   const sortedData = sortConfig.key
-    ? [...filteredAccounts].sort((a, b) => {
+    ? [...filteredProfiles].sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
           return sortConfig.direction === 'ascending' ? -1 : 1;
         }
@@ -71,7 +71,7 @@ const Profiles = () => {
         }
         return 0;
       })
-    : filteredAccounts;
+    : filteredProfiles;
 
   const displayItems = useMemo(() => {
     return sortedData.slice(
@@ -188,17 +188,17 @@ const Profiles = () => {
         </thead>
 
         <tbody>
-          {displayItems.map(filteredAccount => (
-            <tr key={filteredAccount.profileId}>
+          {displayItems.map(filteredProfile => (
+            <tr key={filteredProfile.profileId}>
               <td></td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredAccount.profileId}`}>{filteredAccount.profileId}</Link>
+                <Link to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}>{filteredProfile.profileId}</Link>
               </td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredAccount.profileId}`}>{filteredAccount.country}</Link>
+                <Link to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}>{filteredProfile.country}</Link>
               </td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredAccount.profileId}`}>{filteredAccount.marketplace}</Link>
+                <Link to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}>{filteredProfile.marketplace}</Link>
               </td>
               <td></td>
             </tr>
