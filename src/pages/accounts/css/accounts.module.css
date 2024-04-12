@@ -38,7 +38,8 @@
 .accountsContainer__table {
     width: 100%;
 
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 10px;
 }
 
 .accountsContainer__table__tr__indentBgn {
@@ -49,7 +50,7 @@
 }
 
 .accountsContainer__table__tr__th {
-    padding-bottom: 14px;
+    padding: 12px 10px;
     border-bottom: 1px solid rgb(230, 228, 228);
 
     color: #b5b7c0;
@@ -75,7 +76,7 @@
 .accountsContainer__table__td {
     text-align: left;
 
-    padding: 0px 60px 0px 0px;
+    padding: 12px 10px;
     width: auto;
     border-bottom: 1px solid rgb(230, 228, 228);
     color: #292d32;
