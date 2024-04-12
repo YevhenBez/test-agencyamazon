@@ -138,11 +138,19 @@ const Profiles = () => {
             Everything is fine. The site is working. I just haven't created a
             JSON file for the row you clicked on in the Accounts table. I have
             created a JSON file only for the first eight rows of the Accounts
-            table. Please click on the back button and then select one of the first eight lines.
+            table. Please click on the back button and then select one of the
+            first eight lines.
           </p>
         )}
         <Link to="/">
-        <button type="button" className={!jsonLoaded ? css.profilesContainer__filterBoard__btn : ''}>back</button>
+          <button
+            type="button"
+            className={
+              !jsonLoaded ? css.profilesContainer__filterBoard__btn : ''
+            }
+          >
+            back
+          </button>
         </Link>
         <div className={css.profilesContainer__filterBoard__inputBox}>
           <svg
@@ -192,13 +200,25 @@ const Profiles = () => {
             <tr key={filteredProfile.profileId}>
               <td></td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}>{filteredProfile.profileId}</Link>
+                <Link
+                  to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}
+                >
+                  {filteredProfile.profileId}
+                </Link>
               </td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}>{filteredProfile.country}</Link>
+                <Link
+                  to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}
+                >
+                  {filteredProfile.country}
+                </Link>
               </td>
               <td className={css.profilesContainer__table__td}>
-                <Link to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}>{filteredProfile.marketplace}</Link>
+                <Link
+                  to={`/profiles/${accountId}/campaigns/${filteredProfile.profileId}`}
+                >
+                  {filteredProfile.marketplace}
+                </Link>
               </td>
               <td></td>
             </tr>

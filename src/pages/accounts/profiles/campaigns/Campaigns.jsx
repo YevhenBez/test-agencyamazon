@@ -43,9 +43,9 @@ const Campaigns = () => {
       row =>
         row.campaignId.toLowerCase().includes(filter.toLowerCase()) ||
         row.clicks.toString().includes(filter) ||
-        row.cost.toFixed(2).toString().includes(filter) ||          
-        row.date.includes(filter)        
-      );
+        row.cost.toFixed(2).toString().includes(filter) ||
+        row.date.includes(filter)
+    );
   }, [filter, campaignsData]);
 
   // Обновление totalPages

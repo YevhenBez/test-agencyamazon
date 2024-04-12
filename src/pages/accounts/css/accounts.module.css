@@ -1,85 +1,85 @@
 .accountsContainer {
-    background-color: #ffffff;
-    border-radius: 30px;
+  background-color: #ffffff;
+  border-radius: 30px;
 }
 
 .accountsContainer__filterBoard {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 53px 40px 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 53px 40px 38px;
 }
 
 .accountsContainer__filterBoard__inputBox {
-    position: relative;
+  position: relative;
 }
 
 .accountsContainer__filterBoard__inputBox__svg {
-    position: absolute;
-    right: 210px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  right: 210px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .accountsContainer__filterBoard__inputBox__input {
-    padding: 10px 0px 10px 40px;
-    width: 200px;
-    border-radius: 5px;
-    background-color: #f9fbff;
-    border: 0px;
+  padding: 10px 0px 10px 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #f9fbff;
+  border: 0px;
 }
 
 .accountsContainer__filterBoard__inputBox__input::placeholder {
-    color: #b5b7c0;
-    font-size: 12px;
-    font-weight: 500;
+  color: #b5b7c0;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .accountsContainer__table {
-    width: 100%;
+  width: 100%;
 
-    border-collapse: separate;
-    border-spacing: 0 10px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
 .accountsContainer__table__tr__indentBgn {
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgb(230, 228, 228);
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgb(230, 228, 228);
 
-    width: 38px;
+  width: 38px;
 }
 
 .accountsContainer__table__tr__th {
-    padding: 12px 10px;
-    border-bottom: 1px solid rgb(230, 228, 228);
+  padding: 12px 10px;
+  border-bottom: 1px solid rgb(230, 228, 228);
 
-    color: #b5b7c0;
-    text-align: left;
+  color: #b5b7c0;
+  text-align: left;
 
-    font-size: 14px;
-    font-weight: 600;
-    width: auto;
-    cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: auto;
+  cursor: pointer;
 }
 
 .accountsContainer__table__tr__indentEnd {
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgb(230, 228, 228);
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgb(230, 228, 228);
 
-    width: 44px;
+  width: 44px;
 }
 
 .accountsContainer__table__tr:nth-child(even) {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .accountsContainer__table__td {
-    text-align: left;
+  text-align: left;
 
-    padding: 12px 10px;
-    width: auto;
-    border-bottom: 1px solid rgb(230, 228, 228);
-    color: #292d32;
-    font-size: 14px;
-    font-weight: 600;
+  padding: 12px 10px;
+  width: auto;
+  border-bottom: 1px solid rgb(230, 228, 228);
+  color: #292d32;
+  font-size: 14px;
+  font-weight: 600;
 }

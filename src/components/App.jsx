@@ -13,7 +13,10 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Accounts />} />
           <Route path="profiles/:accountId" element={<Profiles />} />
-          <Route path="profiles/:accountId/campaigns/:profilesId" element={<Campaigns />} />
+          <Route
+            path="profiles/:accountId/campaigns/:profilesId"
+            element={<Campaigns />}
+          />
           <Route path="other" element={<OtherPages />} />
         </Route>
       </Routes>

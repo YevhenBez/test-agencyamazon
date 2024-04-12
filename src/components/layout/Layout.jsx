@@ -10,7 +10,6 @@ const Layout = () => {
         <Sidebar />
       </div>
       <div className={css.layoutPage__container}>
-        
         <Suspense>
           <Outlet />
         </Suspense>
